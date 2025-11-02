@@ -66,7 +66,7 @@ class LocalStorageInspector {
                         </div>
                         <div class="value-editor" data-key="${this.escapeHtml(key)}">
                             <textarea class="value-edit" data-key="${this.escapeHtml(key)}">${this.unescapeHtml(value)}</textarea>
-                            <div class="edit-hint">Click outside to save • Ctrl+Enter to save • Escape to cancel</div>
+                            <div class="edit-hint">Click outside to save</div>
                         </div>
                     </div>
                 `;
