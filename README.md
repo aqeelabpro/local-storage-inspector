@@ -4,19 +4,19 @@ A powerful and intuitive Chrome extension for inspecting, editing, and managing 
 
 ![Local Storage Inspector](https://img.shields.io/badge/Chrome-Extension-brightgreen) ![Version](https://img.shields.io/badge/version-1.0.0-blue) ![License](https://img.shields.io/badge/license-MIT-green)
 
-## 🌟 Features
+## Features
 
 ### 🔍 **Easy Inspection**
 - Automatically detects and displays local storage for the current website
 - No configuration needed - just click the extension icon
 - Real-time updates with refresh capability
 
-### 🎨 **Clean Interface**
+### **Clean Interface**
 - **JSON Formatting**: Automatically detects and formats JSON values
 - **Toggle Views**: Switch between raw and formatted JSON with one click
 - **Search**: Quickly find specific keys or values across all storage items
 
-### ✏️ **Intuitive Editing**
+### **Intuitive Editing**
 - **Double-click to Edit**: Simply double-click any value to edit it inline
 - **Click Outside to Save**: Click anywhere outside the edit box to save changes
 - **Rich Text Editor**: Resizable textarea with proper code editing
@@ -28,12 +28,12 @@ A powerful and intuitive Chrome extension for inspecting, editing, and managing 
 - **Export Data**: Download all local storage as JSON file
 - **Size Statistics**: View total items and storage size
 
-### 🔒 **Privacy Focused**
+### **Privacy Focused**
 - Requires only `activeTab` permission
 - Works only on the current website
 - No data collection or external communications
 
-## 📦 Installation
+## Installation
 
 ### Manual Installation (Developer Mode)
 
@@ -52,7 +52,7 @@ A powerful and intuitive Chrome extension for inspecting, editing, and managing 
    - The extension icon will appear in your toolbar
    - Visit any website and click the icon to inspect its local storage
 
-## 🚀 Usage
+## Usage
 
 ### Basic Inspection
 1. Navigate to any website
@@ -77,7 +77,7 @@ A powerful and intuitive Chrome extension for inspecting, editing, and managing 
 ### JSON Features
 - **Auto-formatting**: JSON values are automatically detected and formatted
 
-## 🛠️ Development
+## Development
 
 ### Project Structure
 ```
@@ -101,7 +101,7 @@ local-storage-inspector/
 ### Building from Source
 No build process required! The extension uses vanilla JavaScript and can be loaded directly.
 
-## 📋 Permissions
+## Permissions
 
 This extension requires the following permissions:
 
@@ -110,7 +110,7 @@ This extension requires the following permissions:
 
 **No sensitive permissions required** - the extension cannot access your browsing history, passwords, or other personal data.
 
-## 🤝 Contributing
+## Contributing
 
 I welcome contributions! Here's how you can help:
 
@@ -128,7 +128,7 @@ git clone https://github.com/aqeelabpro/local-storage-inspector.git
 cd local-storage-inspector
 ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -150,20 +150,15 @@ cd local-storage-inspector
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
-
-- Chrome Extensions team for the excellent documentation
-- Contributors and testers who help improve this extension
-
-## 📞 Support
+## Support
 
 If you encounter any issues or have questions:
 
-1. Check the [Troubleshooting](#troubleshooting) section
+1. Check the [Troubleshooting](#-troubleshooting) section
 2. Search existing [GitHub Issues](https://github.com/aqeelabpro/local-storage-inspector/issues)
 3. Create a new issue with details about your problem
 
-## 🔄 Changelog
+## Changelog
 
 ### v1.0.0
 - Initial release
