@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 700px;
+      height: 500px;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    
+    .container {
+      padding: 20px;
+      height: calc(100% - 40px);
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .domain-info {
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+    }
+    
+    .controls {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    
+    .search-box {
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      width: 200px;
+    }
+    
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    
+    .btn-primary {
+      background: #007bff;
+      color: white;
+    }
+    
+    .btn-danger {
+      background: #dc3545;
+      color: white;
+    }
+    
+    .btn-success {
+      background: #28a745;
+      color: white;
+    }
+    
+    .storage-content {
+      flex: 1;
+      overflow-y: auto;
+      border: 1px solid #eee;
+      border-radius: 4px;
+      padding: 10px;
+    }
+    
+    .storage-item {
+      background: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      padding: 15px;
+    }
+    
+    .key {
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+    
+    .value {
+      color: #666;
+      word-break: break-all;
+      font-family: 'Courier New', monospace;
+      background: #f8f9fa;
+      padding: 10px;
+      border-radius: 3px;
+      border: 1px solid #e9ecef;
+      font-size: 12px;
+      max-height: 150px;
+      overflow-y: auto;
+    }
+    
+    .actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    
+    .btn-sm {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+    
+    .empty-state {
+      text-align: center;
+      color: #666;
+      padding: 40px;
+      font-style: italic;
+    }
+    
+    .stats {
+      margin-top: 15px;
+      padding: 10px;
+      background: #f8f9fa;
+      border-radius: 4px;
+      font-size: 12px;
+      color: #666;
+    }
+    
+    .json-toggle {
+      background: none;
+      border: none;
+      color: #007bff;
+      cursor: pointer;
+      font-size: 12px;
+      margin-left: 5px;
+    }
+
+    .value-edit {
+    width: 100%;
+    height: 150px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    background: #fff;
+    resize: vertical;
+}
+.value {
+    cursor: pointer;
+    transition: background-color 0.2s;
+    min-height: 20px;
+}
+
+.value:hover {
+    background-color: #f8f9fa;
+}
+
+.value-editor {
+    position: relative;
+}
+
+.value-edit {
+    width: 100%;
+    height: 120px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    background: #fff;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.edit-hint {
+    font-size: 11px;
+    color: #666;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.storage-item.editing {
+    border: 2px solid #007bff;
+    border-radius: 6px;
+    background: #f8fbff;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 12px;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="domain-info" id="domainInfo">Loading...</div>
+      <div class="controls">
+        <input type="text" id="searchInput" class="search-box" placeholder="Search keys or values...">
+        <button id="refreshBtn" class="btn btn-primary">Refresh</button>
+        <button id="clearAllBtn" class="btn btn-danger">Clear All</button>
+        <button id="exportBtn" class="btn btn-success">Export</button>
+      </div>
+    </div>
+    
+    <div class="storage-content" id="storageContent">
+      <div class="empty-state">Loading local storage data...</div>
+    </div>
+    
+    <div class="stats" id="statsInfo"></div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

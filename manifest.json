@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Local Storage Inspector",
+  "version": "1.0",
+  "description": "Inspect and manage local storage data",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Local Storage Inspector"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png"
+  }
+}
